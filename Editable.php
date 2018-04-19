@@ -15,6 +15,9 @@ use yii2mod\editable\bundles\EditableBootstrapAsset;
 use yii2mod\editable\bundles\EditableComboDateAsset;
 use yii2mod\editable\bundles\EditableDatePickerAsset;
 use yii2mod\editable\bundles\EditableDateTimePickerAsset;
+use yii2mod\editable\templates\EditableBootstrapTemplate;
+use yii2mod\editable\templates\EditableJqueryTemplate;
+use yii2mod\editable\templates\EditableJqueryUITemplate;
 
 /**
  * Class Editable
@@ -53,6 +56,8 @@ class Editable extends InputWidget
      */
     public $clientEvents = [];
 
+    public $template = 'bootstrap';
+
     /**
      * Initializes the widget.
      */
@@ -85,6 +90,19 @@ class Editable extends InputWidget
     protected function registerClientScript()
     {
         $view = $this->getView();
+        switch($this->template){
+            case 'jquery':
+                EditableJqueryTemplate::register($view);
+                break;
+            case 'jquery-ui':
+                EditableJqueryUITemplate::register($this);
+                break;
+            case 'bootstrap':
+            default:
+                EditableBootstrapTemplate::register($view);
+                break;
+        }
+
         switch ($this->type) {
             case 'address':
                 EditableAddressAsset::register($view);
@@ -98,8 +116,6 @@ class Editable extends InputWidget
             case 'datetime':
                 EditableDateTimePickerAsset::register($view);
                 break;
-            default:
-                EditableBootstrapAsset::register($view);
         }
         $id = ArrayHelper::remove($this->pluginOptions, 'selector', '#' . $this->options['id']);
         $id = preg_replace('/([.])/', '\\\\\\\$1', $id);

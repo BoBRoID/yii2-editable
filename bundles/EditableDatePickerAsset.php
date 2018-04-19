@@ -31,10 +31,4 @@ class EditableDatePickerAsset extends AssetBundle
         'bootstrap-editable-datepicker.js',
     ];
 
-    /**
-     * @var array
-     */
-    public $depends = [
-        'yii2mod\editable\bundles\EditableBootstrapAsset',
-    ];
 }

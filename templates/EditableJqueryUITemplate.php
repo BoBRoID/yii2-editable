@@ -1,6 +1,6 @@
 <?php
 
-namespace yii2mod\editable\bundles;
+namespace yii2mod\editable\templates;
 
 use yii\web\AssetBundle;
 
@@ -9,18 +9,18 @@ use yii\web\AssetBundle;
  *
  * @package yii2mod\editable\bundles
  */
-class EditableBootstrapAsset extends AssetBundle
+class EditableJqueryUITemplate extends AssetBundle
 {
     /**
      * @var string
      */
-    public $sourcePath = '@bower/x-editable/dist/bootstrap3-editable';
+    public $sourcePath = '@bower/x-editable/dist/jqueryui-editable';
 
     /**
      * @var array
      */
     public $css = [
-        'css/bootstrap-editable.css',
+        'css/jqueryui-editable.css',
     ];
 
     /**
@@ -28,7 +28,6 @@ class EditableBootstrapAsset extends AssetBundle
      */
     public $depends = [
         'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapPluginAsset',
     ];
 
     /**
@@ -36,6 +35,6 @@ class EditableBootstrapAsset extends AssetBundle
      */
     public function init()
     {
-        $this->js[] = YII_DEBUG ? 'js/bootstrap-editable.js' : 'js/bootstrap-editable.min.js';
+        $this->js[] = YII_DEBUG ? 'js/jqueryui-editable.js' : 'js/jqueryui-editable.min.js';
     }
 }

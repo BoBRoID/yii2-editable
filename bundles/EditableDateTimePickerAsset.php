@@ -17,13 +17,6 @@ class EditableDateTimePickerAsset extends AssetBundle
     public $sourcePath = '@vendor/yii2mod/yii2-editable/assets/datetimepicker';
 
     /**
-     * @var array
-     */
-    public $depends = [
-        'yii2mod\editable\bundles\EditableBootstrapAsset',
-    ];
-
-    /**
      * Init object
      */
     public function init()

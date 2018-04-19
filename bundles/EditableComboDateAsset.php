@@ -25,10 +25,4 @@ class EditableComboDateAsset extends AssetBundle
         'bootstrap-editable-combodate.js',
     ];
 
-    /**
-     * @var array
-     */
-    public $depends = [
-        'yii2mod\editable\bundles\EditableBootstrapAsset',
-    ];
 }
