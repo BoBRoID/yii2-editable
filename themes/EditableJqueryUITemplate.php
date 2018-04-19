@@ -1,6 +1,6 @@
 <?php
 
-namespace yii2mod\editable\templates;
+namespace yii2mod\editable\themes;
 
 use yii\web\AssetBundle;
 
@@ -9,18 +9,18 @@ use yii\web\AssetBundle;
  *
  * @package yii2mod\editable\bundles
  */
-class EditableJqueryTemplate extends AssetBundle
+class EditableJqueryUITemplate extends AssetBundle
 {
     /**
      * @var string
      */
-    public $sourcePath = '@bower/x-editable/dist/jquery-editable';
+    public $sourcePath = '@bower/x-editable/dist/jqueryui-editable';
 
     /**
      * @var array
      */
     public $css = [
-        'css/jquery-editable.css',
+        'css/jqueryui-editable.css',
     ];
 
     /**
@@ -35,6 +35,6 @@ class EditableJqueryTemplate extends AssetBundle
      */
     public function init()
     {
-        $this->js[] = YII_DEBUG ? 'js/jquery-editable-poshytip.js' : 'js/jquery-editable-poshytip.min.js';
+        $this->js[] = YII_DEBUG ? 'js/jqueryui-editable.js' : 'js/jqueryui-editable.min.js';
     }
 }

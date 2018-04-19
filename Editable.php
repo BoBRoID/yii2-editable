@@ -56,7 +56,10 @@ class Editable extends InputWidget
      */
     public $clientEvents = [];
 
-    public $template = 'bootstrap';
+    /**
+     * @var string 
+     */
+    public $theme = 'bootstrap';
 
     /**
      * Initializes the widget.
@@ -90,7 +93,7 @@ class Editable extends InputWidget
     protected function registerClientScript()
     {
         $view = $this->getView();
-        switch($this->template){
+        switch($this->theme){
             case 'jquery':
                 EditableJqueryTemplate::register($view);
                 break;

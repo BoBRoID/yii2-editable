@@ -45,7 +45,10 @@ class EditableColumn extends DataColumn
      */
     public $format = 'raw';
 
-    public $template = 'bootstrap';
+    /**
+     * @var string - theme of widget
+     */
+    public $theme = 'bootstrap';
 
     /**
      * @var array
@@ -108,7 +111,7 @@ class EditableColumn extends DataColumn
     protected function registerClientScript()
     {
         $view = $this->grid->getView();
-        switch($this->template){
+        switch($this->theme){
             case 'jquery':
                 EditableJqueryTemplate::register($view);
                 break;
