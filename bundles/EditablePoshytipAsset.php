@@ -21,14 +21,14 @@ class EditablePoshytipAsset extends AssetBundle
      * @var array
      */
     public $css = [
-        'css/style.css',
+        'style.css',
     ];
 
     /**
      * @var array
      */
     public $js = [
-        'js/poshytip.js',
+        'poshytip.js',
     ];
 
 }
