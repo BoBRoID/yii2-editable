@@ -9,6 +9,7 @@
 namespace yii2mod\editable\bundles;
 
 use yii\web\AssetBundle;
+use yii\web\JqueryAsset;
 
 class EditablePoshytipAsset extends AssetBundle
 {
@@ -20,7 +21,7 @@ class EditablePoshytipAsset extends AssetBundle
     public $css = [
         'tip-yellowsimple/tip-yellowsimple.css',
     ];
-    
+
     /**
      * @var array
      */
@@ -28,4 +29,7 @@ class EditablePoshytipAsset extends AssetBundle
         'jquery.poshytip.js',
     ];
 
+    public $depends = [
+        JqueryAsset::class
+    ];
 }
