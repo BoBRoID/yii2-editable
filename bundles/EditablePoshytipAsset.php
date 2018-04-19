@@ -8,6 +8,7 @@
 
 namespace yii2mod\editable\bundles;
 
+use yii\web\AssetBundle;
 
 class EditablePoshytipAsset extends AssetBundle
 {
