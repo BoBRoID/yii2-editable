@@ -45,6 +45,8 @@ class EditableColumn extends DataColumn
      */
     public $format = 'raw';
 
+    public $template = 'bootstrap';
+
     /**
      * @var array
      */
@@ -106,6 +108,19 @@ class EditableColumn extends DataColumn
     protected function registerClientScript()
     {
         $view = $this->grid->getView();
+        switch($this->template){
+            case 'jquery':
+                EditableJqueryTemplate::register($view);
+                break;
+            case 'jquery-ui':
+                EditableJqueryUITemplate::register($this);
+                break;
+            case 'bootstrap':
+            default:
+                EditableBootstrapTemplate::register($view);
+                break;
+        }
+
         switch ($this->type) {
             case 'address':
                 EditableAddressAsset::register($view);
@@ -119,8 +134,6 @@ class EditableColumn extends DataColumn
             case 'datetime':
                 EditableDateTimePickerAsset::register($view);
                 break;
-            default:
-                EditableBootstrapAsset::register($view);
         }
 
         $rel = $this->options['rel'];
