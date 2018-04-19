@@ -15,9 +15,9 @@ use yii2mod\editable\bundles\EditableBootstrapAsset;
 use yii2mod\editable\bundles\EditableComboDateAsset;
 use yii2mod\editable\bundles\EditableDatePickerAsset;
 use yii2mod\editable\bundles\EditableDateTimePickerAsset;
-use yii2mod\editable\templates\EditableBootstrapTemplate;
-use yii2mod\editable\templates\EditableJqueryTemplate;
-use yii2mod\editable\templates\EditableJqueryUITemplate;
+use yii2mod\editable\themes\EditableBootstrapTemplate;
+use yii2mod\editable\themes\EditableJqueryTemplate;
+use yii2mod\editable\themes\EditableJqueryUITemplate;
 
 /**
  * Class Editable
@@ -57,7 +57,7 @@ class Editable extends InputWidget
     public $clientEvents = [];
 
     /**
-     * @var string 
+     * @var string
      */
     public $theme = 'bootstrap';
 
