@@ -17,6 +17,10 @@ class EditablePoshytipAsset extends AssetBundle
      */
     public $sourcePath = '@vendor/yii2mod/yii2-editable/assets/poshytip';
 
+    public $css = [
+        'tip-yellowsimple/tip-yellowsimple.css',
+    ];
+    
     /**
      * @var array
      */
