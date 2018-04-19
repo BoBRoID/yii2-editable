@@ -28,7 +28,7 @@ class EditablePoshytipAsset extends AssetBundle
      * @var array
      */
     public $js = [
-        'js/poshytip.min.js',
+        'js/poshytip.js',
     ];
 
 }
