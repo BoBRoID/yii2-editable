@@ -3,6 +3,7 @@
 namespace yii2mod\editable\themes;
 
 use yii\web\AssetBundle;
+use yii2mod\editable\bundles\EditablePoshytipAsset;
 
 /**
  * Class EditableBootstrapAsset
@@ -27,6 +28,7 @@ class EditableJqueryTemplate extends AssetBundle
      * @var array
      */
     public $depends = [
+        EditablePoshytipAsset::class,
         'yii\web\YiiAsset',
     ];
 
